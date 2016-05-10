@@ -70,8 +70,8 @@ import java.util.ArrayList;
  *     >>> 第三个数为: index from {2,3} >>> 3td number is 3
  * 
  *     >>> 修正 k 值 k -= index * (n-1)! = 1 - 1 * (1-1)! = 0 <br />
- *     >>> 第三个数的index = 0 / (1 - 1)! = 0 <br />
- *     >>> 第三个数为: index from {2} >>> 4th number is 2
+ *     >>> 第四个数的index = 0 / (1 - 1)! = 0 <br />
+ *     >>> 第四个数为: index from {2} >>> 4th number is 2
  * 
  *     >>>所以n = 4的情况下第20个组合为：{4,1,3,2}
  * 
@@ -112,9 +112,5 @@ public class AC {
 		}
 
 		return sb.toString();
-	}
-
-	public static void main(String[] args) {
-		System.out.println(new AC().getPermutation(4, 20));
 	}
 }
