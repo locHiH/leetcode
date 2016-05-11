@@ -29,7 +29,7 @@ public class Mine {
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		// 递归终止条件
 		if (l1 == null && l2 == null) {
-			return null;
+			return new ListNode(0);
 		}
 		// 修正当前节点为10的情况
 		if (l1.equals(l2)) {
@@ -72,8 +72,15 @@ public class Mine {
 			}
 			l1.next.val += 1;
 		}
-		l1.next = addTwoNumbers(l1.next, l2 == null ? null : l2.next);
-		return l1;
+		// l1.next = addTwoNumbers(l1.next, l2 == null ? null : l2.next);
+		ListNode head = addTwoNumbers(l1.next, l2 == null ? null : l2.next);
+		ListNode p = head;
+		while (p.next != null) {
+			p = p.next;
+		}
+		p.next = l1;
+		l1.next = null;
+		return head;
 	}
 
 	/**
