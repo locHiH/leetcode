@@ -1,6 +1,6 @@
 # leetcode
 practice makes perfect
-_注释全在代码里_
+_ 娉ㄩ噴鍏ㄥ湪浠ｇ爜閲寏 _
 
 # ref
 https://leetcode.com/
