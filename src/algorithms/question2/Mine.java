@@ -29,7 +29,10 @@ public class Mine {
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		// 递归终止条件
 		if (l1 == null && l2 == null) {
+			// 倒序
 			return new ListNode(0);
+			// 正序
+			// return null;
 		}
 		// 修正当前节点为10的情况
 		if (l1.equals(l2)) {
@@ -72,7 +75,9 @@ public class Mine {
 			}
 			l1.next.val += 1;
 		}
+		// 正序
 		// l1.next = addTwoNumbers(l1.next, l2 == null ? null : l2.next);
+		// 倒序
 		ListNode head = addTwoNumbers(l1.next, l2 == null ? null : l2.next);
 		ListNode p = head;
 		while (p.next != null) {
